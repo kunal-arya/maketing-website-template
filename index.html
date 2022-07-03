@@ -17,35 +17,38 @@
     <title>jake&Elwood</title>
 </head>
 <body>
-        <header class="nav">
-            <div class="header-logo">
-                <img src="./img/logo.png" />
+        <header class="header header-home main-grid">
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="./img/logo.png" />
+                </a>
+                <button aria-label="Open navigation" class="open-nav"></button>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="nav-link current-page" href="#">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul class="nav-ul">
-                    <li class="nav-list">
-                        <a class="nav-item current-page" href="#">home</a>
-                    </li>
-                    <li class="nav-list">
-                        <a class="nav-item" href="#">about us</a>
-                    </li>
-                    <li class="nav-list">
-                        <a class="nav-item" href="#">contact</a>
-                    </li>
-                </ul>
-            </nav>
         </header> 
         <main>
-            <section class="hero">
+            <section class="hero main-grid">
                 <h1 class="main-h1">
-                    The only marketing agency on <span>a mission from God</span>, fully dedicated to increase your web traffic. 
+                    The only marketing agency on <span class="accent-color">a mission from God</span>, fully dedicated to increase your web traffic. 
                 </h1>
                 <p class="main-para">
                     We're two brothers from Chicago that are trying to pay back our debt. We can help you with <strong>SEO, SEM content marketing</strong> and whatever else.
                 </p>
-                <button class="btn primary-btn" href="#">contact us</button>
+                <a href="index.html" class="btn btn-primary hero-btn" >contact us</a>
             </section>
-            <section class="info">
+            <section class="info main-grid">
                 <div class="col sec1">
                     <h2 class="info-h2 center-h2">About Us</h2>
                     <p>We grew up in downtown Chicago, and we used to play in a band. <strong>Jake loves fried chicken</strong>, and <strong>Elwood loves dry white toast.</strong> </p>
@@ -60,7 +63,7 @@
                 </div>
             </section>
         </main>
-        <footer>
+        <footer class="footer main-grid">
             <div class="footer-column">
                 <img src="img/logo.png" alt="Jake&Elwood Company Logo">
                 <p class="footer-para">
@@ -71,15 +74,15 @@
                 </p>
             </div>
                  <div class="footer-socials">
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                    <ul class="social-list">
+                        <li class="social-item">
+                            <a class="social-link" href="#"><i class="fa-brands fa-facebook-square"></i></a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <li class="social-item">
+                            <a class="social-link" href="#"><i class="fa-brands fa-twitter"></i></a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <li class="social-item">
+                            <a class="social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
                         </li>
                     </ul>
                  </div>
