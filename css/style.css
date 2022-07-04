@@ -37,6 +37,7 @@ body{
 
    .main-h1{
     font-size: 1.5rem;
+    margin-bottom: 0;
    }
 
    .main-para{
@@ -73,51 +74,160 @@ body{
         grid-template-columns: minmax(1em,1fr) minmax(0px,500px) minmax(1em,1fr);
     }
 
-    @media (min-width: 750px){
+    @media (min-width: 675px){
        .main-grid{
             grid-template-columns:  minmax(1em,1fr) repeat(3,minmax(150px,320px)) minmax(1em,1fr);
-            gap: 2em;
+            gap: 0 2em;
        } 
     }
 
     .main-grid > * {
-        grid-column: 2/span 1;
+        grid-column: 2/-2;
     }
 
-    /* navigation */
+    /* ===============
+        Navigation 
+       ===============*/
+
     .header{
         background-color: #000;
     }
 
+
+
     .header-content{
         display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        grid-column: 2/-2;
+        width: 100%;
     }
 
-    .nav-list{
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
+    .header-home{
+        position: absolute;
+        background: transparent;
+        width: 100%;
     }
 
-    .nav-item{
-        text-decoration: none;
-    }
 
     .logo-link{
         background-color: var(--primary-color);
-        padding-top: 2em;
+        padding-top: 3em;
     }
 
+    .nav{
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        width: 100%;
+        transform: translateX(0);
+    }
+
+    .open-navigation {
+        transform: translateX(-100%);
+    }
+
+    .nav-list{
+        flex-direction: column;
+        list-style: none;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-item{
+        margin-bottom: 3em;
+    }
 
     .nav-link{
-
+        text-decoration: none;
+        color: white;
+        font-size: 5rem;
     }
 
-    /* Footer */
+    .nav-link:hover,
+    .nav-link:focus{
+        color: var(--primary-color);
+    }
+
+    /* nav - buttons */
+    .open-nav{
+        border: 0;
+        background-color: inherit;
+        color: #fff;
+        font-size: 2em;
+        align-self: center;
+        padding: 0.5em;
+    }
+
+    .open-nav:hover,
+    .open-nav:focus{
+        color: var(--primary-color);
+    }
+
+    .close-nav{
+        position: absolute;
+        background-color: #000;
+        color: #fff;
+        font-size: 3em;
+        padding: 0.5em;
+    }
+
+    .close-nav:hover,
+    .open-nav:focus {
+        color: var(--primary-color);
+    }
+
+    .current-page {
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+    .current-page:hover,
+    .current-page:focus {
+        color: #fff;
+    }
+
+    @media (min-width: 675px) {
+        .open-nav,
+        .close-nav{
+            display: none;
+        }
+
+        .nav{
+            position: initial;
+        }
+
+        .nav-list{
+            flex-direction: initial;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+
+        .nav-item {
+            margin: 0;
+            margin-right: 1em;
+            padding: 0;
+        }
+
+        .nav-link{
+            font-size: 1rem;
+        }
+
+        .header-home .nav{
+            background-color: transparent;
+        }
+    
+    }
+
+    /* =============
+        Footer
+       ============= */
+    
     .footer {
         background-color: #40404030;
         text-align: center;
@@ -148,7 +258,7 @@ body{
         color: #000;
     }
 
-    @media (min-width: 750px){
+    @media (min-width: 675px){
         .footer-column{
             grid-column: 2/ span 2;
         }
@@ -176,11 +286,29 @@ body{
     justify-self: left;
    }
 
-   @media (min-width: 750px){
+   @media (min-width: 350px){
+    .hero > * {
+        margin-right: 20%;
+    }
+   }
+
+   @media (min-width: 500px){
+    .hero > * {
+        margin-right: 30%;
+    }
+   }
+
+   @media (min-width: 675px){
     .hero > *{
         grid-column: 2/ span 2;
     }
+
+    .hero{
+        padding: 10em 0 6em;
+    }
    }
+
+
 
 /* =================
     Info Area
@@ -191,7 +319,7 @@ body{
    }
 
 
-   @media (min-width: 750px){
+   @media (min-width: 675px){
     .sec1{
         grid-column: 2;
     }
